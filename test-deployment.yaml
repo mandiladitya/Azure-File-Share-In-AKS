@@ -11,7 +11,5 @@ spec:
         mountPath: /var/www/html
   volumes:
   - name: azure
-    azureFile:
-      secretName: azure-secret
-      shareName: aksshare
-      readOnly: false
+    persistentVolumeClaim:
+      claimName: azurefile
